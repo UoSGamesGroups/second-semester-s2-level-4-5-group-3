@@ -1,0 +1,21 @@
+2 Players Roll down a hill and they have to get to the end -
+
+Where is the fun? - 
+Player fun and interaction with each other
+The constant speed increase from the physic itself
+The theme that we are going to choose
+
+where is the Challenge?
+The way in which the player avoids what is coming at them
+How the players are going to be interacting with each other
+How they handle the constant momentum that is coming at them, making it harder and harder to avoid what is coming at them
+
+
+How to make this game simple, yet fun to play for  the player?
+Keep it simple with the one mechanic, but creating a small way in which the player can move or affect the other player
+Make ways in which players can create certain blocks to stop the opponant?
+Other pathes that each player can take, the steaper paths are faster but others paths yield other rewards
+Each player should have simple controls to fit the brief? On e button for jump, and another button for use
+The player will have the choice of which path they take, They can drop to a lower floor if they wish.
+Generated map each time? Balancing around the length of the maps, This way there is a slight RNG for some players to win
+	even though they might be unskilled in someway.
