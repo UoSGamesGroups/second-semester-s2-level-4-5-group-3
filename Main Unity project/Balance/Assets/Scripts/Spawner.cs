@@ -7,11 +7,13 @@ public class Spawner : MonoBehaviour {
 
     public Transform SpawnerPos;
     public float time = 5;
+	public float spawntimer;
+
 
     void Start()
     {
         StartCoroutine(spawnTime());
-
+		spawntimer = 60; 
     }
         IEnumerator spawnTime()
             {
@@ -22,7 +24,17 @@ public class Spawner : MonoBehaviour {
 
         StartCoroutine(spawnTime());
 
-
     }
+
+	void FixedUpdate (){
+
+		spawntimer -= Time.deltaTime;
+
+		if (spawntimer <= 1) 
+		{
+			StopAllCoroutines ();
+		}
+
+	}
   }
 
