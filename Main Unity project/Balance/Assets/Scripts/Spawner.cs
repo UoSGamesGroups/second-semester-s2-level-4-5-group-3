@@ -18,7 +18,7 @@ public class Spawner : MonoBehaviour {
         IEnumerator spawnTime()
             {
         int prefabIndex = UnityEngine.Random.Range(0, 9);
-        Debug.Log(prefabIndex);
+       // Debug.Log(prefabIndex);
         Instantiate(prefabList[prefabIndex], SpawnerPos.transform.position, transform.rotation);
             yield return new WaitForSeconds(time);
 
