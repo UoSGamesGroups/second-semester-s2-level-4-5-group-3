@@ -7,22 +7,18 @@ public class scoreCounter : MonoBehaviour {
 
     public int playerOneScore;
     public Text score1;
-    public bool addScore;
  
     void Start ()
     {
         playerOneScore = 0;
-        addScore = false;
 	}
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        addScore = false;
-        if (col.gameObject.tag == "Items" & !addScore)
+   
+        if (col.gameObject.tag == "Items")
         {
-            
             playerOneScore += 1;
-            addScore = true;
         }
     }
 

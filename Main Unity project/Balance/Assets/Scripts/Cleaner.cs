@@ -15,5 +15,13 @@ public class Cleaner : MonoBehaviour
         {
             Destroy(col.gameObject);
         }
+        if (col.gameObject.tag == "bigPlatform")
+        {
+            Destroy(col.gameObject);
+        }
+        if (col.gameObject.tag == "Collided")
+        {
+            Destroy(col.gameObject);
+        }
     }
 }
