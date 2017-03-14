@@ -7,19 +7,7 @@ public class Cleaner : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag == "Items")
-        {
-            Destroy(col.gameObject);
-        }
-        if (col.gameObject.tag == "smallPlatform")
-        {
-            Destroy(col.gameObject);
-        }
-        if (col.gameObject.tag == "bigPlatform")
-        {
-            Destroy(col.gameObject);
-        }
-        if (col.gameObject.tag == "Collided")
+        if (col.gameObject.tag == "Items" || col.gameObject.tag == "smallPlatform" || col.gameObject.tag == "bigPlatform" || col.gameObject.tag == "Collided")
         {
             Destroy(col.gameObject);
         }

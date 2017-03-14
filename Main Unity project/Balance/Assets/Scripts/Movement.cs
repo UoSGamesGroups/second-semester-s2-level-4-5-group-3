@@ -8,13 +8,10 @@ public class Movement : MonoBehaviour
     private float Velocity;
     public float Speed;
 
-
-
     void Update()
     {
 
         Velocity = 0f;
-
 
         if (Input.GetKey(KeyCode.D))
         {

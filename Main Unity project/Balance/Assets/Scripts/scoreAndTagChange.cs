@@ -5,27 +5,36 @@ using UnityEngine.UI;
 
 public class scoreAndTagChange : MonoBehaviour
 {
+    private const float PlayerDivide = 2.0f;
 
-    public int playerOneScore;
-    public Text score1;
+    public string playerTag = "p1";
+    public int ScoreValue = 1;
+    public ScoreDisplay PlayerScore;
+
+    public bool scored = false;
 
     void Start()
     {
-        playerOneScore = 0;
+        if (transform.position.x < PlayerDivide)
+        {
+            PlayerScore = GameObject.Find("p1 platform").GetComponent<ScoreDisplay>();
+        }
+        else
+        {
+            PlayerScore = GameObject.Find("p2 platform").GetComponent<ScoreDisplay>();
+            playerTag = "p2";
+        }
     }
 
     void OnCollisionEnter2D(Collision2D col)
     {
+        if (scored)
+            return;
 
-        if (col.gameObject.tag == "Items" || col.gameObject.tag == "p1")
+        if (col.gameObject.tag == "Items" || col.gameObject.tag == playerTag)
         {
-            playerOneScore += 1;
-            this.gameObject.transform.tag = "Collided";
-        }
-    }
-
-    void Update()
-    {
-        score1.text = playerOneScore.ToString();
+            PlayerScore.AddScore(ScoreValue);
+            scored = true;
+        } 
     }
 }

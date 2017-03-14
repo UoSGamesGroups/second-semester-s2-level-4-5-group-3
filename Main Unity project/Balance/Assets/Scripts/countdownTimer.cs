@@ -19,6 +19,10 @@ public class countdownTimer : MonoBehaviour {
 
 		cdTimer -= Time.deltaTime;
 		timerText.text = cdTimer.ToString ("f2");
-		
+	    if (cdTimer <= 0)
+	    {
+	        timerText.text = "Game Over";
+	    }
+
 	}
 }

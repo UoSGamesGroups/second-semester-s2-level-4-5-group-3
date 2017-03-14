@@ -16,12 +16,12 @@ public class p2Movement : MonoBehaviour
         Velocity = 0f;
 
 
-        if (Input.GetKey(KeyCode.L))
+        if (Input.GetKey(KeyCode.RightArrow))
         {
             Velocity = Speed;
         }
 
-        if (Input.GetKey(KeyCode.J))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             Velocity = -Speed;
         }
