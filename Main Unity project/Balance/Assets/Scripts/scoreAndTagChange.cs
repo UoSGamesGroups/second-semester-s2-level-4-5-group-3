@@ -9,6 +9,7 @@ public class scoreAndTagChange : MonoBehaviour
 
     public string playerTag = "p1";
     public int ScoreValue = 1;
+    public int PenaltyScore = -2;
     public ScoreDisplay PlayerScore;
 
     public bool scored = false;
@@ -36,5 +37,10 @@ public class scoreAndTagChange : MonoBehaviour
             PlayerScore.AddScore(ScoreValue);
             scored = true;
         } 
+        if (col.gameObject.tag == "cars")
+        {
+            PlayerScore.AddScore(PenaltyScore);
+            scored = true;
+        }
     }
 }
